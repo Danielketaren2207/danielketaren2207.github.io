@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <style>
+    /* Custom CSS */
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+    }
+    .navbar {
+      background-color: #563d7c;
+    }
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+    }
+    .navbar-brand {
+      font-weight: bold;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #563d7c;
+    }
+    .jumbotron {
+      background-color: #f8f9fa;
+      padding: 4rem 2rem;
+    }
+    .jumbotron h1 {
+      font-size: 3rem;
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .card:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+    .social-icons i {
+      font-size: 1.5rem;
+      margin: 0 10px;
+      color: #333;
+    }
+    .footer {
+      background-color: #563d7c;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .timeline {
+      position: relative;
+      padding: 2rem 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #563d7c;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+    .timeline-item {
+      padding: 1rem 0;
+      position: relative;
+      width: 50%;
+    }
+    .timeline-item-left {
+      left: 0;
+    }
+    .timeline-item-right {
+      left: 50%;
+    }
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background-color: white;
+      border: 4px solid #563d7c;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .timeline-item-left::after {
+      left: -10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">My Portfolio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="jumbotron text-center">
+    <div class="container">
+      <img src="profile.jpg" alt="Profile Picture" class="profile-img mb-3" data-aos="fade-up">
+      <h1 class="display-4">Hello, I'm [Your Name]</h1>
+      <p class="lead">A passionate Front End Developer</p>
+      <div class="social-icons">
+        <a href="#" data-aos="fade-right"><i class="fab fa-linkedin"></i></a>
+        <a href="#" data-aos="fade-up"><i class="fab fa-github"></i></a>
+        <a href="#" data-aos="fade-left"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="container text-center my-5">
+    <h2>About Me</h2>
+    <p class="lead">I'm a front-end developer with a passion for creating beautiful and functional websites. With a background in both design and development, I have a unique understanding of how to create a seamless user experience.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container my-5">
+    <h2 class="text-center">Projects</h2>
+    <div class="row">
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card">
+          <img src="project1.jpg" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">Description of project 1.</p>
+            <a href="#" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card">
+          <img src="project2.jpg" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Project 2</h5>
+            <p class="card-text">Description of project 2.</p>
+            <a href="#" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card">
+          <img src="project3.jpg" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">Project 3</h5>
+            <p class="card-text">Description of project 3.</p>
+            <a href="#" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="container my-5">
+    <h2 class="text-center">Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item timeline-item-left" data-aos="fade-right">
+        <h4>Job Title 1</h4>
+        <p>Company Name, Year - Year</p>
+        <p>Description of job responsibilities and achievements.</p>
+      </div>
+      <div class="timeline-item timeline-item-right" data-aos="fade-left">
+        <h4>Job Title 2</h4>
+        <p>Company Name, Year - Year</p>
+        <p>Description of job responsibilities and achievements.</p>
+      </div>
+      <div class="timeline-item timeline-item-left" data-aos="fade-right">
+        <h4>Job Title 3</h4>
+        <p>Company Name, Year - Year</p>
+        <p>Description of job responsibilities and achievements.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container my-5">
+    <h2 class="text-center">Contact Me</h2>
+    <form data-aos="fade-up">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Your Name">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Your Email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <span>&copy; 2024 [Your Name]. All Rights Reserved.</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- AOS Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

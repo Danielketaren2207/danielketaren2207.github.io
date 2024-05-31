@@ -66,3 +66,7 @@ nav{
     text-align: center;
     margin: 5px 0; /* Reduce margins */
 }
+
+.desc{
+    text-align: left !important; 
+}
